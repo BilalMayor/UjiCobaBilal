@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Beranda</title>
+    <script>
+        function handleGetStarted() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <style>
+        /* Animasi untuk background RGB berjalan */
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Efek background animasi pada section */
+        .animated-bg {
+            background: linear-gradient(45deg, #9b4fe7, #edf816, #38f88e, #3b82f6, #c80ae1);
+            background-size: 300% 300%;
+            animation: backgroundAnimation 6s infinite linear;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-700 py-8 text-white text-center text-4xl font-semibold shadow-xl">
+        Pet's Paradise 😊😊😊
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-col items-center justify-center min-h-screen px-6">
+
+        <section class="w-full max-w-screen-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Text and Button Section dengan Background RGB berjalan -->
+                <div class="p-8 md:p-12 lg:px-16 lg:py-24 flex flex-col justify-center text-center md:text-left shadow-2xl rounded-xl animated-bg">
+                    <h2 class="text-4xl font-bold text-white md:text-5xl leading-tight">
+                        Selamat Datang di Pet's Paradise 😍
+                    </h2>
+                    <p class="mt-6 text-lg text-white opacity-90">
+                        Kami Menyediakan Semua Kebutuhan Anda Dengan Layanan Terbaik.
+                    </p>
+                    <div class="mt-8">
+                        <a href="index.html" onclick="handleGetStarted()" class="inline-block rounded-md border border-white bg-white text-lg font-semibold text-blue-600 px-12 py-4 transition transform hover:bg-blue-600 hover:text-white focus:ring-3 focus:ring-yellow-400 focus:outline-none hover:scale-105">
+                            Masuk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Images Section -->
+                <div class="flex flex-col gap-4">
+                    <!-- Gambar 1 di kanan atas -->
+                    <div class="w-full h-80 bg-cover bg-center rounded-lg shadow-lg" style="background-image: url('https://www.utopicomputers.com/wp-content/uploads/2019/05/Gambar-Toko-Online.png');"></div>
+
+                    <!-- Gambar 2 di kanan bawah dengan transparansi yang lebih halus dan teks di tengah -->
+                    <div class="relative w-full h-80 bg-cover bg-center rounded-lg shadow-lg" style="background-image: url('images/FotoKu.jpg'); opacity: 0.7;">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <p class="text-black text-3xl font-bold" style="text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);">Pemilik Web</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+        &copy; 2025 Perusahaan Anda. Semua Hak Dilindungi.
+    </footer>
+
+</body>
+</html>
